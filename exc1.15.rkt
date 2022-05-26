@@ -1,7 +1,7 @@
 #lang sicp
 
 ; Exercise 1.15
-;
+; https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-11.html#%_thm_1.15
 ;
 ; The sine of an angle (specified in radians) can be computed by making use of
 ; the approximation sin(x) ≈ x if x is sufficiently small, and the
