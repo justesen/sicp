@@ -1,7 +1,7 @@
 #lang sicp
 
 ; Exercise 1.11
-;
+; https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-11.html#%_thm_1.11
 ;
 ; A function f is defined by the rule that f(n) = n if n < 3 and
 ;     f(n) = f(n−1) + 2f(n−2) + 3f(n−3) if n≥3.
