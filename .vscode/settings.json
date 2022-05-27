@@ -1,3 +1,13 @@
 {
-    "editor.tabSize": 2
+    "editor.tabSize": 2,
+    "editor.formatOnType": true,
+    "editor.rulers": [
+        79,
+    ],
+    "[racket]": {
+        "editor.rulers": [
+            79
+        ],
+        "editor.wordSeparators": "()[]{}\",'`;#|"
+    }
 }
