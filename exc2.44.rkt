@@ -1,12 +1,25 @@
 #lang sicp
 
 (#%require sicp-pict)
-(#%require "ch2.2.4.rkt")
 
 ; Exercise 2.44
 ;
 ; Define the procedure up-split used by corner-split. It is similar to
 ; right-split, except that it switches the roles of below and beside.
+
+(define (flipped-pairs painter)
+  (let ((painter2
+         (beside painter
+                 (flip-vert painter))))
+    (below painter2 painter2)))
+
+(define (right-split painter n)
+  (if (= n 0)
+      painter
+      (let ((smaller (right-split painter
+                                  (- n 1))))
+        (beside painter
+                (below smaller smaller)))))
 
 (define (up-split painter n)
   (if (= n 0)
@@ -15,7 +28,6 @@
                                (- n 1))))
         (below painter
                (beside smaller smaller)))))
-
 
 (define (corner-split painter n)
   (if (= n 0)
