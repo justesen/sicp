@@ -1,6 +1,6 @@
 #lang sicp
 
-(#%require "ch1.rkt")
+(#%require "../chapter1/ch1.rkt")
 
 (#%provide filter
            accumulate
