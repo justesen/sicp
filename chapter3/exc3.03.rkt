@@ -1,5 +1,7 @@
 #lang sicp
 
+(#%provide make-account)
+
 ; Exercise 3.3
 ;
 ; Modify the make-account procedure so that it creates password-protected

@@ -1,7 +1,8 @@
 #lang sicp
 
 (#%provide get
-           put)
+           put
+           rand-update)
 
 (define (make-table)
   (let ((local-table (list '*table*)))
@@ -43,3 +44,9 @@
 (define operation-table (make-table))
 (define get (operation-table 'lookup-proc))
 (define put (operation-table 'insert-proc!))
+
+; Pseudo-random number generator that we can use in place of rand-update from
+; the book
+(define (rand-update x)
+  (let ((a 27) (b 26) (m 127))
+    (modulo (+ (* a x) b) m)))
