@@ -41,7 +41,10 @@
            decode
            choose-branch
            adjoin-set-h
-           make-leaf-set)
+           make-leaf-set
+           attach-tag
+           type-tag
+           contents)
 
 (define (filter predicate sequence)
   (cond ((null? sequence) nil)
@@ -268,3 +271,18 @@
          (make-leaf (car pair)    ; symbol
                     (cadr pair))  ; frequency
          (make-leaf-set (cdr pairs))))))
+
+(define (attach-tag type-tag contents)
+  (cons type-tag contents))
+
+(define (type-tag datum)
+  (if (pair? datum)
+      (car datum)
+      (error "Bad tagged datum:
+              TYPE-TAG" datum)))
+
+(define (contents datum)
+  (if (pair? datum)
+      (cdr datum)
+      (error "Bad tagged datum:
+              CONTENTS" datum)))
