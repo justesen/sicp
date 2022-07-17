@@ -1,7 +1,6 @@
 #lang sicp
 
-(#%provide operation-table 
-           get
+(#%provide get
            put)
 
 (define (make-table)
