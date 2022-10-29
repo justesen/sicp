@@ -2,7 +2,8 @@
 
 (#%provide get
            put
-           rand-update)
+           rand-update
+           last-pair)
 
 (define (make-table)
   (let ((local-table (list '*table*)))
@@ -50,3 +51,8 @@
 (define (rand-update x)
   (let ((a 27) (b 26) (m 127))
     (modulo (+ (* a x) b) m)))
+
+(define (last-pair x)
+  (if (null? (cdr x))
+      x
+      (last-pair (cdr x))))

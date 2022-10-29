@@ -24,3 +24,5 @@
     dispatch))
 
 (+ (f 0) (f 1))
+
+; Gives 0, meaning arguments are evaluated left to right.
