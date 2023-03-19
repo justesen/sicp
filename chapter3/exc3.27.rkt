@@ -69,7 +69,7 @@
 ; proportional to n. Would the scheme still work if we had simply defined
 ; memo-fib to be (memoize fib)?
 
-; memo-fib copmutes the nth Fibonacci number in O(n) time, because it doesn't
+; memo-fib computes the nth Fibonacci number in O(n) time, because it doesn't
 ; have to redo computations, so each Fib(m), m < n, is only computed once,
 ; afterwards, it's just a lookup.
 
